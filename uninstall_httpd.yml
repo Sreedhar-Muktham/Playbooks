@@ -1,0 +1,16 @@
+---
+- name: Playbook for uninstalling httpd
+  hosts: webserver
+  #become: true
+  tasks:
+  - name: Stop httpd service  
+    service:
+      name: httpd
+      state: stopped
+  
+  - name: Uninstall httpd
+    service:
+      name: httpd
+      state: remove
+           
+  

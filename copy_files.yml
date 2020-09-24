@@ -1,0 +1,11 @@
+---
+- name: Copy files to target servers
+  hosts: all
+  become: true
+  tasks: 
+  - name: Copying files to servers
+    copy:
+      src: /opt/ansible/index.html
+      dest: /home/ansadmin/index.html
+      mode: 0600
+      owner: sree

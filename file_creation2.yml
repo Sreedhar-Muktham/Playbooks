@@ -1,0 +1,10 @@
+---
+- name: Playbook for creating folders
+  hosts: all
+  #become: true
+  #gather_facts: no
+  tasks: 
+  - name: Cration of folder
+    file: 
+      path: /home/ansadmin/dir1
+      state: directory
